@@ -1,0 +1,40 @@
+# Offline-First Restaurant POS
+
+> Restaurant point-of-sale built as a PWA that keeps taking orders when the connection drops.
+
+Author: Muhammad Tanveer (Full-Stack AI Automation Engineer)
+Contact: mtanveertahir66@gmail.com | https://www.linkedin.com/in/muhammad-tanveer-advenno/
+Repository: https://github.com/haddindeve/restaurant-pos-offline-first
+Source availability: implementation held in a private repository; access on request.
+
+## Summary
+A restaurant POS that stops working during an internet outage stops the restaurant. Service continues whether or not the connection does, so the software has to as well.
+
+A React PWA that treats the network as optional: orders are written locally first and synchronised to a Node backend when a connection exists. The kitchen and the till keep a consistent view of an order regardless of connectivity at the moment it was taken.
+
+## Stack
+Frontend: React PWA, Backend: Node.js, Offline: Local-first persistence with background sync, Deployment: Render
+
+## Capabilities
+- Offline order taking
+- Background synchronisation
+- Table and menu management
+- Kitchen order flow
+- Installable on standard tablets
+
+## Outcomes
+- Service continues through connectivity loss
+- Orders reconcile automatically rather than being re-keyed
+
+## FAQ
+Q: What happens during an outage?
+A: Orders are written to local storage and synchronised once the connection returns; staff see no interruption.
+
+Q: Does it need special hardware?
+A: No - it installs as a PWA on standard tablets.
+
+Q: How are conflicts handled?
+A: The sync layer reconciles local and server state on reconnect rather than overwriting blindly.
+
+Q: Is the source public?
+A: Private repository.
